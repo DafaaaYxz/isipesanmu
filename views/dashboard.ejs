@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Inbox - <%= username %></title>
+</head>
+<body class="bg-[#000000] text-white p-6">
+    <div class="max-w-xl mx-auto">
+        <div class="flex justify-between items-center mb-10">
+            <div>
+                <h1 class="text-2xl font-bold">Inbox Anda</h1>
+                <p class="text-xs text-gray-500">ngl.link/<%= host %>/u/<%= username %></p>
+            </div>
+            <a href="/logout" class="text-xs font-bold bg-[#ff3e3e] px-4 py-2 rounded-full">LOGOUT</a>
+        </div>
+
+        <div class="space-y-4">
+            <% if(messages.length == 0) { %>
+                <div class="bg-[#0a0a0a] border border-[#1a1a1a] p-10 rounded-3xl text-center">
+                    <p class="text-gray-500">Belum ada pesan anonim...</p>
+                </div>
+            <% } %>
+
+            <% messages.forEach(msg => { %>
+                <div class="bg-[#0a0a0a] border border-[#1a1a1a] p-6 rounded-2xl">
+                    <p class="text-xs text-[#ff3e3e] font-bold mb-2">ANONIM • <%= msg.createdAt.toLocaleTimeString() %></p>
+                    <p class="text-lg font-medium"><%= msg.content %></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
