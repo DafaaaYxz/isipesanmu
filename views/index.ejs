@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NGL Modern - Login</title>
+</head>
+<body class="bg-[#000000] text-[#ffffff] flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-sm p-8 bg-[#0a0a0a] border border-[#1a1a1a] rounded-3xl shadow-2xl">
+        <h1 class="text-4xl font-black mb-2 text-center tracking-tighter">NGL<span class="text-[#ff3e3e]">.</span></h1>
+        <p class="text-gray-500 text-center mb-8 text-sm uppercase tracking-widest font-bold">Anonymous Messaging</p>
+        <form action="/auth" method="POST" class="space-y-4">
+            <input type="text" name="username" placeholder="Username" class="w-full p-4 bg-[#111111] border border-[#222222] rounded-xl focus:outline-none focus:border-[#ff3e3e] transition-all" required>
+            <input type="password" name="password" placeholder="Password" class="w-full p-4 bg-[#111111] border border-[#222222] rounded-xl focus:outline-none focus:border-[#ff3e3e] transition-all" required>
+            <div class="grid grid-cols-2 gap-3 pt-4">
+                <button name="action" value="login" class="bg-white text-black font-black py-4 rounded-xl hover:scale-95 transition-transform">MASUK</button>
+                <button name="action" value="register" class="bg-[#1a1a1a] text-white border border-[#333333] font-black py-4 rounded-xl hover:bg-[#222222] transition-colors">DAFTAR</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
