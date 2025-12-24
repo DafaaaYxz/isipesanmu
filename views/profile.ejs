@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kirim ke @<%= target %></title>
+</head>
+<body class="bg-[#000000] text-white flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-md bg-[#0a0a0a] border border-[#1a1a1a] p-8 rounded-[40px] text-center">
+        <div class="w-20 h-20 bg-[#1a1a1a] rounded-full mx-auto mb-4 border-2 border-[#ff3e3e] flex items-center justify-center font-bold text-2xl uppercase">
+            <%= target[0] %>
+        </div>
+        <h2 class="text-xl font-bold mb-6">Kirim pesan anonim ke @<%= target %></h2>
+        <form action="/send/<%= target %>" method="POST">
+            <textarea name="message" placeholder="Tulis sesuatu yang jujur..." class="w-full h-40 p-5 bg-[#111111] border border-[#222222] rounded-3xl focus:outline-none focus:border-white resize-none mb-4" required></textarea>
+            <button class="w-full bg-[#ff3e3e] text-white font-black py-4 rounded-full hover:scale-105 transition-transform shadow-lg shadow-[#ff3e3e44]">KIRIM!</button>
+        </form>
+    </div>
+</body>
+</html>
