@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 // --- KONFIGURASI DATABASE ---
-const MONGO_URI = "ISI_DENGAN_LINK_MONGODB_KAMU"; 
+const MONGO_URI = "mongodb+srv://zeuz8686_db_user:CjKTkIAGJHLruevx@cluster0.dlvpsdd.mongodb.net/?appName=Cluster0"; 
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log("Database Terkoneksi!"))
